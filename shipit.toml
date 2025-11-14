@@ -1,0 +1,15 @@
+[project]
+name = "nanays_kakanin"
+provider = "django"
+app_dir = "nanays_kakanin"
+manage_path = "nanays_kakanin/manage.py"
+python_version = "3.11"
+
+[build]
+commands = [
+  "pip install -r requirements.txt",
+  "python nanays_kakanin/manage.py collectstatic --noinput"
+]
+
+[run]
+command = "python nanays_kakanin/manage.py runserver 0.0.0.0:${PORT}"
